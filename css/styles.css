@@ -7,9 +7,27 @@
   --add-bg-color: #f5f4fa;
   --contrast-bg-color: #2f303a;
   --title-font: "Roboto", sans-serif;
+  --grid-column: 3;
 }
-/* доп цвета для лого #000  #fff 
-фон футера #2F303A */
+/* доп цвета для лого #000  #fff */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4, 
+p {
+  margin-top: 0;
+}
 
 body {
   font-family: "Roboto", noto, segoe ui, arial, sans-serif;
@@ -17,8 +35,16 @@ body {
   background-color: var(--bg-color);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden {
@@ -33,6 +59,40 @@ body {
 }
 
 /*logo+header+footer*/
+
+.flex-container {
+  display: flex;
+}
+
+.header-container {
+  height: 80px;
+  width: 1200px;
+  padding: 24px 15px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-header {
+  justify-content: flex-start;
+}
+
+.nav-list {
+  margin-left: 93px;
+  align-items: center;
+}
+
+.nav {
+  margin-right: 50px;
+}
+
+.contact-item {
+  margin-left: 50px;
+}
+
+.list-address {
+  margin-top: 20px;
+}
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -100,6 +160,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--bg-color);
+  margin-bottom: 30px;
 }
 
 .hero-section {
@@ -116,6 +177,32 @@ body {
   background-color: var(--accent-color);
   cursor: pointer;
   font-family: inherit;
+
+  min-height: 200;
+  min-width: 50;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 32px;
+}
+
+.container {
+  width: 1200px;
+  padding: 94px 15px;
+  margin: auto;
+}
+
+.hero-container {
+  padding: 200px 15px;
+}
+
+.footer-container {
+  width: 1200px;
+  margin: auto;
+  padding: 60px 15px;
+}
+
+.practice-container{
+  padding-top: 0;
 }
 
 .title {
@@ -124,12 +211,28 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 50px;
 }
 
+.features,
 .practice,
-.team,
-.filter-project {
+.filter-project,
+.team {
   text-align: center;
+  display: flex;
+}
+
+.filter-project {
+  margin-bottom: 34px;
+  justify-content: center;
+}
+
+.features {
+  text-align: left;
+}
+
+.item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .features-title {
@@ -138,6 +241,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .features-description {
@@ -145,13 +249,13 @@ body {
   line-height: 1.21;
   letter-spacing: 0.03em;
   color: var(--add-text-color);
+  margin-bottom: 0;
 }
 
 .team {
   font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  /* background-color: var(--add-bg-color); */
 }
 
 .team-section {
@@ -161,6 +265,8 @@ body {
 .team-title {
   font-weight: 500;
   color: var(--main-text-color);
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .team-description {
@@ -178,6 +284,8 @@ body {
   background-color: var(--add-bg-color);
   cursor: pointer;
   font-family: inherit;
+margin-left: 8px;
+margin-right: 8px;
 }
 
 .button-filter-portfolio:hover,
@@ -198,4 +306,17 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+}
+
+.portfolio {
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+  padding: 0;
+}
+
+.portfolio-card {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 30px * var(--grid-column)) / var(--grid-column));
 }
