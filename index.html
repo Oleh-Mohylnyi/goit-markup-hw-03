@@ -13,17 +13,17 @@
     </head>
 
     <body>
-        <header>
-            <div class="header-container flex-container">
-                <nav class="nav-header flex-container">
+        <header class="header-part">
+            <div class="container header-container">
+                <nav class="nav-header">
                     <a href="./index.html" class="logo">Web<span class="logo-up">Studio</span></a>
-                    <ul class="list nav-list flex-container">
-                        <li><a class="link nav current" href="./index.html">Студия</a></li>
-                        <li><a class="link nav" href="./portfolio.html">Портфолио</a></li>
-                        <li><a class="link nav" href="">Контакты</a></li>
+                    <ul class="list nav-list">
+                        <li><a class="link nav-item current" href="./index.html">Студия</a></li>
+                        <li><a class="link nav-item" href="./portfolio.html">Портфолио</a></li>
+                        <li><a class="link nav-item" href="">Контакты</a></li>
                     </ul>
                 </nav>
-                <ul class="list flex-container">
+                <ul class="list contact-header">
                     <li><a class="link contact-item" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
                     <li><a class="link contact-item" href="tel:+380961111111">+38 096 111 11 11</a></li>
                 </ul>
@@ -37,7 +37,7 @@
                     <button class="button-order" type="button">Заказать услугу</button>
                 </div>
             </section>
-            <section>
+            <section class="features-section">
                 <div class="container">
                     <h2 class="visually-hidden">Особенности</h2>
                     <ul class="list features flex-container-grid">
@@ -61,14 +61,14 @@
                 </div>
             </section>
             
-            <section>
-                <div class="container practice-container">
+            <section class="practice-section">
+                <div class="container">
                     <h2 class="title">Чем мы занимаемся</h2>
-                <ul class="list flex-container-grid">
-                    <li class="item"><img src="./images/box1.jpg" alt="рабочее место разработчика" width="370"></li>
-                    <li class="item"><img src="./images/box2.jpg" alt="рабочее место дизайнера, работающего с макетом" width="370"></li>
-                    <li class="item"><img src="./images/box3.jpg" alt="рабочее место дизайнера, работающего с палитрой цветов" width="370"></li>
-                </ul>
+                    <ul class="list flex-container-grid">
+                        <li class="item"><img src="./images/box1.jpg" alt="рабочее место разработчика" width="370"></li>
+                        <li class="item"><img src="./images/box2.jpg" alt="рабочее место дизайнера, работающего с макетом" width="370"></li>
+                        <li class="item"><img src="./images/box3.jpg" alt="рабочее место дизайнера, работающего с палитрой цветов" width="370"></li>
+                    </ul>
                 </div>
             </section>
             
@@ -78,39 +78,47 @@
                 <ul class="team list flex-container-grid">
                     <li class="item">
                         <img src="./images/teamcard1.jpg" alt="портрет Product Designer Игоря Демьяненко" width="270">
-                        <h3 class="team-title ">Игорь Демьяненко</h3>
-                        <p class="team-description">Product Designer</p>
+                        <div class="team-card">
+                            <h3 class="team-title ">Игорь Демьяненко</h3>
+                            <p class="team-description">Product Designer</p>
+                        </div>
                     </li>
                     <li class="item">
                         <img src="./images/teamcard2.jpg" alt="портрет Frontend Developer Ольги Репиной" width="270">
-                        <h3 class="team-title ">Ольга Репина</h3>
-                        <p class="team-description">Frontend Developer</p>
+                        <div class="team-card">
+                            <h3 class="team-title ">Ольга Репина</h3>
+                            <p class="team-description">Frontend Developer</p>
+                        </div>
                     </li>
                     <li class="item">
                         <img src="./images/teamcard3.jpg" alt="портрет Marketing Николая Тарасова" width="270">
-                        <h3 class="team-title ">Николай Тарасов</h3>
-                        <p class="team-description">Marketing</p>
+                        <div class="team-card">
+                            <h3 class="team-title ">Николай Тарасов</h3>
+                            <p class="team-description">Marketing</p>
+                        </div>
                     </li>
                     <li class="item">
                         <img src="./images/teamcard4.jpg" alt="портрет UI Designer Михаила Ермакова" width="270">
-                        <h3 class="team-title ">Михаил Ермаков</h3>
-                        <p class="team-description">UI Designer</p>
+                        <div class="team-card">
+                            <h3 class="team-title ">Михаил Ермаков</h3>
+                            <p class="team-description">UI Designer</p>
+                        </div>
                     </li>
                 </ul>
                 </div>
             </section>
         </main>
 
-        <footer class="list footer">
-            <div class="footer-container">
+        <footer class="footer-part">
+            <div class="container footer-container">
                 <a href="./index.html" class="logo">Web<span class="logo-down">Studio</span></a>
-                <address>
+                <address class="address-part">
                     <ul class="list list-address">
-                        <li><a class="link address" href="https://goo.gl/maps/jDDkmHE5Bs7uJv8Z7" target="blank"
+                        <li class="list-address-item"><a class="link contact-footer-color" href="https://goo.gl/maps/jDDkmHE5Bs7uJv8Z7" target="blank"
                                 rel="noopener noreferrer">г. Киев, пр-т
                                 Леси Украинки, 26</a></li>
-                        <li><a class="link address contact-footer" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                        <li><a class="link address contact-footer" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                        <li class="list-address-item"><a class="link " href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                        <li class="list-address-item"><a class="link " href="tel:+380961111111">+38 096 111 11 11</a></li>
                     </ul>
                 </address>
             </div>
